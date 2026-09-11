@@ -1,0 +1,660 @@
+ /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f7f7f8;
+            color: #151515;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .article-header {
+            width: 100%;
+            min-height: 68px;
+
+            padding: 0 6%;
+
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .article-logo {
+            color: #111;
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .article-nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .article-nav a {
+            color: #333;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           ARTICLE WRAPPER
+        ====================================================== */
+
+        .article-page {
+            width: min(1000px, 92%);
+            margin: 0 auto;
+
+            padding: 60px 0 80px;
+        }
+
+
+        /* =====================================================
+           ARTICLE
+        ====================================================== */
+
+        .article {
+            background: #fff;
+
+            padding: clamp(25px, 5vw, 65px);
+
+            border-radius: 22px;
+
+            border: 1px solid #e8e8e8;
+        }
+
+
+        /* =====================================================
+           ARTICLE CATEGORY
+        ====================================================== */
+
+        .article-category {
+            display: inline-block;
+
+            margin-bottom: 16px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+           H1
+        ====================================================== */
+
+        .article h1 {
+            margin: 0 0 22px;
+
+            font-size: clamp(34px, 5vw, 58px);
+
+            line-height: 1.08;
+
+            letter-spacing: -2px;
+
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           ARTICLE META
+        ====================================================== */
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-bottom: 32px;
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           FEATURED IMAGE
+        ====================================================== */
+
+        .article-featured-image {
+            width: 100%;
+
+            display: block;
+
+            margin: 0 0 40px;
+
+            border-radius: 16px;
+
+            object-fit: cover;
+
+            max-height: 550px;
+        }
+
+
+        /* =====================================================
+           ARTICLE CONTENT
+        ====================================================== */
+
+        .article-content {
+            max-width: 760px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           H2
+        ====================================================== */
+
+        .article-content h2 {
+            margin: 45px 0 18px;
+
+            font-size: clamp(25px, 3vw, 34px);
+
+            line-height: 1.25;
+
+            letter-spacing: -1px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           H3
+        ====================================================== */
+
+        .article-content h3 {
+            margin: 32px 0 14px;
+
+            font-size: clamp(20px, 2.5vw, 26px);
+
+            line-height: 1.3;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PARAGRAPHS
+        ====================================================== */
+
+        .article-content p {
+            margin: 0 0 22px;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #333;
+        }
+
+
+        /* =====================================================
+           LINKS
+        ====================================================== */
+
+        .article-content a {
+            color: #111;
+
+            font-weight: 700;
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           LISTS
+        ====================================================== */
+
+        .article-content ul,
+        .article-content ol {
+            margin: 0 0 25px;
+
+            padding-left: 28px;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #333;
+        }
+
+
+        /* =====================================================
+           IMAGES INSIDE ARTICLE
+        ====================================================== */
+
+        .article-content img {
+            display: block;
+
+            width: 100%;
+            max-width: 100%;
+
+            height: auto;
+
+            margin: 32px auto;
+
+            border-radius: 14px;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           BLOCKQUOTE
+        ====================================================== */
+
+        .article-content blockquote {
+            margin: 32px 0;
+
+            padding: 22px 25px;
+
+            border-left: 4px solid #111;
+
+            background: #f5f5f5;
+
+            border-radius: 0 12px 12px 0;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #444;
+        }
+
+
+        /* =====================================================
+           STRONG
+        ====================================================== */
+
+        .article-content strong {
+            color: #111;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           RELATED POSTS
+        ====================================================== */
+
+        .related-section {
+            margin-top: 55px;
+        }
+
+        .related-heading {
+            margin-bottom: 25px;
+        }
+
+        .related-heading h2 {
+            margin: 0 0 8px;
+
+            font-size: 30px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+        }
+
+        .related-heading p {
+            margin: 0;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+        .related-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           RELATED CARD
+        ====================================================== */
+
+        .related-card {
+            background: #fff;
+
+            border: 1px solid #e7e7e7;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.09);
+        }
+
+        .related-card-image {
+            display: block;
+
+            width: 100%;
+
+            height: 180px;
+
+            overflow: hidden;
+        }
+
+        .related-card-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform .4s ease;
+        }
+
+        .related-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .related-card-content {
+            padding: 18px;
+        }
+
+        .related-card-content h3 {
+            margin: 0;
+
+            font-size: 16px;
+
+            line-height: 1.4;
+        }
+
+        .related-card-content h3 a {
+            color: #111;
+
+            text-decoration: none;
+        }
+
+        .related-card-content p {
+            margin: 10px 0 0;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            color: #777;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .article-footer {
+            margin-top: 40px;
+
+            padding: 45px 6% 30px;
+
+            background: #111;
+
+            color: #fff;
+        }
+
+        .article-footer strong {
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .article-footer p {
+            max-width: 550px;
+
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .article-footer-links {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+
+            margin: 25px 0;
+        }
+
+        .article-footer-links a {
+            color: #ccc;
+
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+
+        .article-footer-links a:hover {
+            color: #fff;
+        }
+
+
+/* ==========================================================
+   RELATED POST CARDS
+========================================================== */
+
+.related-card {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+}
+
+/* Make the entire card one clean link */
+.related-card-link {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Remove browser default link colors */
+.related-card-link:link,
+.related-card-link:visited,
+.related-card-link:hover,
+.related-card-link:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Image */
+.related-card-image {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+}
+
+.related-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.related-card-content {
+    padding: 28px 32px 30px;
+}
+
+/* Title */
+.related-card-content h3 {
+    margin: 0 0 22px;
+    color: #222;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Description */
+.related-card-content p {
+    margin: 0;
+    color: #666;
+    font-size: 19px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .related-card {
+        border-radius: 22px;
+        margin-bottom: 38px;
+    }
+
+    .related-card-image {
+        height: 390px;
+    }
+
+    .related-card-content {
+        padding: 28px 32px 30px;
+    }
+
+    .related-card-content h3 {
+        font-size: 19px;
+        line-height: 1.3;
+        margin-bottom: 22px;
+    }
+
+    .related-card-content p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+}
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 750px) {
+
+            .article-header {
+                padding: 0 5%;
+            }
+
+            .article-nav {
+                gap: 13px;
+            }
+
+            .article-nav a {
+                font-size: 12px;
+            }
+
+            .article-page {
+                width: 94%;
+
+                padding: 25px 0 50px;
+            }
+
+            .article {
+                padding: 25px 20px;
+
+                border-radius: 16px;
+            }
+
+            .article h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+
+                line-height: 1.85;
+            }
+
+            .related-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .article-logo {
+                font-size: 21px;
+            }
+
+            .article-nav a:nth-child(3) {
+                display: none;
+            }
+
+            .article-featured-image {
+                margin-bottom: 30px;
+
+                border-radius: 12px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .related-card-image {
+                height: 210px;
+            }
+
+        }
