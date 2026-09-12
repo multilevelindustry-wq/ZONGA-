@@ -59,3 +59,430 @@ footer{margin-top:55px;background:#0b1020;color:#cbd5e1;padding:45px 0}
 .article{max-width:850px;margin:45px auto}.article h1{font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-3px;margin:15px 0}.article .lead{font-size:18px;line-height:1.75;color:var(--muted)}.article .cover{width:100%;height:450px;object-fit:cover;border-radius:28px;margin:28px 0}.article h2{font-size:30px;margin-top:38px}.article p,.article li{font-size:16px;line-height:1.85;color:#344054}.article ul{padding-left:22px}.back{font-size:13px;font-weight:900;color:var(--accent)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hubs{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.menu{display:block}.footergrid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.container{width:min(100% - 22px,1180px)}.topline .container{display:none}.hero,.hero-inner{min-height:470px}.hero-inner{padding:27px}.hero h1{letter-spacing:-2.5px}.hero p{font-size:14px}.grid{grid-template-columns:1fr}.hubs{grid-template-columns:repeat(2,1fr)}.hub{min-height:125px}.section-head{display:block}.notice{display:block}.notice .btn{margin-top:15px}.card-img{height:205px}.article .cover{height:280px;border-radius:20px}.footergrid{grid-template-columns:1fr}.nav{min-height:65px}}
+
+
+/* =====================================================
+   ZONGO TV CATEGORY CARDS
+===================================================== */
+
+.hubs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   CATEGORY CARD
+===================================================== */
+
+.hub {
+
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    min-height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    color: #fff;
+
+    background: #111827;
+
+    box-shadow:
+        0 12px 35px rgba(16, 24, 40, .12);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.hub img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    opacity: .72;
+
+    transition:
+        transform .6s ease;
+}
+
+
+/* =====================================================
+   DARK IMAGE OVERLAY
+===================================================== */
+
+.hub:before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .20)
+        );
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.hub-overlay {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 19px;
+
+    box-sizing: border-box;
+}
+
+
+.hub small {
+
+    margin: 0 0 8px;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.78);
+}
+
+
+.hub strong {
+
+    display: block;
+
+    max-width: 170px;
+
+    margin: 0;
+
+    font-size: 20px;
+
+    line-height: 1.05;
+
+    font-weight: 950;
+
+    letter-spacing: -.7px;
+
+    color: #fff;
+}
+
+
+.hub span {
+
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    color: rgba(255,255,255,.82);
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.hub:after {
+
+    content: "→";
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 15px;
+
+    right: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.16);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 16px;
+
+    color: #fff;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.hub:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(16, 24, 40, .20);
+}
+
+
+.hub:hover img {
+
+    transform:
+        scale(1.08);
+}
+
+
+.hub:hover:after {
+
+    transform:
+        translateX(3px);
+
+    background:
+        rgba(255,255,255,.25);
+}
+
+
+/* =====================================================
+   INDIVIDUAL CATEGORY TINT
+===================================================== */
+
+.h1:before {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 23, 42, .92),
+            rgba(15, 23, 42, .15)
+        );
+}
+
+
+.h2:before {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(76, 29, 149, .88),
+            rgba(76, 29, 149, .10)
+        );
+}
+
+
+.h3:before {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(127, 29, 29, .90),
+            rgba(127, 29, 29, .10)
+        );
+}
+
+
+.h4:before {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 47, 73, .90),
+            rgba(8, 47, 73, .10)
+        );
+}
+
+
+.h5:before {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(6, 78, 59, .90),
+            rgba(6, 78, 59, .10)
+        );
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .hubs {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .hubs {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 11px;
+
+    }
+
+
+    .hub {
+
+        min-height: 155px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .hub-overlay {
+
+        min-height: 155px;
+
+        padding: 15px;
+
+    }
+
+
+    .hub strong {
+
+        font-size: 17px;
+
+    }
+
+
+    .hub span {
+
+        font-size: 9px;
+
+    }
+
+
+    .hub:after {
+
+        width: 27px;
+        height: 27px;
+
+        top: 11px;
+        right: 11px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .hubs {
+
+        gap: 9px;
+
+    }
+
+
+    .hub {
+
+        min-height: 145px;
+
+    }
+
+
+    .hub-overlay {
+
+        min-height: 145px;
+
+        padding: 13px;
+
+    }
+
+
+    .hub strong {
+
+        font-size: 15px;
+
+    }
+
+                        }
