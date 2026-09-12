@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
   const popup=document.querySelector(".popup");
   if(popup){
-    setTimeout(()=>popup.classList.add("show"),7000);
+    setTimeout(()=>popup.classList.add("show"),5000);
     popup.querySelector(".close")?.addEventListener("click",()=>popup.remove());
   }
   document.querySelectorAll("[data-menu]").forEach(btn=>{
