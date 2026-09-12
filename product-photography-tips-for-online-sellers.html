@@ -685,6 +685,315 @@
 
         }
 
+  /* =====================================================
+   ZONGA CATEGORY MOVIE
+   NESTED DIV COMPATIBLE
+===================================================== */
+
+.zonga-category-movie {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 35px 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   MOVIE LINK
+===================================================== */
+
+.zonga-category-movie > a {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MOVIE CARD
+===================================================== */
+
+.zonga-category-movie-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    background: #111;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .12);
+
+    animation:
+        zongaCategoryMovieIn .7s ease;
+}
+
+
+/* =====================================================
+   IMAGE
+   ALWAYS COVERS THE WHOLE CARD
+===================================================== */
+
+.zonga-category-movie-card img {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    box-sizing: border-box;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    opacity: .72;
+
+    transform: scale(1);
+
+    transition:
+        transform 5s linear;
+}
+
+
+/* =====================================================
+   IMAGE MOVEMENT
+===================================================== */
+
+.zonga-category-movie-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.zonga-category-movie-overlay {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .05)
+        );
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   CATEGORY LABEL
+===================================================== */
+
+.zonga-category-movie-label {
+    display: block;
+
+    margin: 0 0 7px 0;
+    padding: 0;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #fff;
+
+    opacity: .85;
+}
+
+
+/* =====================================================
+   CATEGORY TITLE
+===================================================== */
+
+.zonga-category-movie-title {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: clamp(24px, 4vw, 38px);
+
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   CATEGORY TEXT
+===================================================== */
+
+.zonga-category-movie-text {
+    display: block;
+
+    margin: 8px 0 0 0;
+    padding: 0;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: #fff;
+
+    opacity: .9;
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes zongaCategoryMovieIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(35px)
+            scale(.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .zonga-category-movie {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 25px 0;
+    }
+
+    .zonga-category-movie-card {
+        width: 100%;
+        height: 165px;
+
+        border-radius: 14px;
+    }
+
+    .zonga-category-movie-overlay {
+        padding: 20px;
+    }
+
+    .zonga-category-movie-title {
+        font-size: 25px;
+    }
+
+    .zonga-category-movie-text {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .zonga-category-movie-card {
+        height: 150px;
+    }
+
+    .zonga-category-movie-overlay {
+        padding: 17px;
+    }
+
+    .zonga-category-movie-title {
+        font-size: 22px;
+    }
+
+    .zonga-category-movie-text {
+        font-size: 11px;
+    }
+
+ }
+
     </style>
     
 
